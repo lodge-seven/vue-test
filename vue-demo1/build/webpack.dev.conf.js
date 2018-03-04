@@ -21,7 +21,7 @@ const portfinder = require('portfinder')
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
-console.log('lq：进入webpack开发环境哦~')
+console.log('lq：进入webpack开发环境哦~~')
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   // 生成了一系列css相关文件的加载包 如：.css，.postcss，.less，.sass，.scss，.stylus，.styl
