@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 /* @绝对路径配置，在webpack.base.conf中 */
 import HelloWorld from '@/components/HelloWorld'
 /* 匹配，先找vue文件，没有就找目录。是目录的话，找的是下面的index.js文件 */
@@ -11,7 +13,7 @@ import { name1, name2 } from '@/router/demo1.js'
     这个方法是vue提供给第三方用于install的方法哦
 */
 Vue.use(Router)
-
+Vue.use(ElementUI)
 /* eslint，加载的变量必须要使用，不然报错，有时候注释还不能留空格唉 */
 /*  #/这样的路由 这个路由的第三方来自vue-router 输出一个路由实例
     es6的模块功能，export对外输出模块，import加载这个接口的模块

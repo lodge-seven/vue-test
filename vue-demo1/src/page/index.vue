@@ -1,19 +1,19 @@
 <template>
     <div>
-        <Header></Header>
-        <div class="article_list" >
-          <!-- <img src="static/image/one/good.jpg" alt="hh"> -->
-          <ul>
-            <!-- time自定义的标签，html5允许 -->
-            <li v-for="i in list" :key="i.id">
-              <time v-text="$utils.goodTime(i.create_at)"></time>
-              <router-link :to="'/content/'+ i.id">
-                {{ i.title }}
-              </router-link>
-            </li>
-          </ul>
+      <div class="main-container">
+        <div class="sidebar">
+            <h1 class="logo">小七管理平台</h1>
+            <ul class="sidebar-list">
+              <li>
+                <a href="#" class="d-block"><img src="../img/fenrun-1.png" alt="分润">分润记录</a>
+              </li>
+              <li>
+                <a href="#" class="d-block"><img src="../img/shangpin.png" alt="分润">商城商品</a>
+              </li>
+            </ul>
         </div>
-        <Footer></Footer>
+        <!-- <iframe class="main-frame"  src="./shop.html" frameborder="0"></iframe> -->
+      </div>
     </div>
 </template>
 
@@ -36,14 +36,6 @@ export default {
     // Vue实例中的全局对象
     // console.log(this.$api)
     console.log('lq：创建了index.vue实例对象哦~')
-    // var root = 'http://cnodejs.org/api/v1'
-    // var root = '/api/v1'
-    /* 这样就跨域了，用反向代理进行域名重定向 */
-    // var root = 'http://121.201.67.222:20111/Tpl/admin'
-    // var root = '/Tpl/admin'
-    // this.$api.get('topics', null, root, (r) => {
-    //   console.log(r)
-    // })
     this.getData()
   },
   /* 创建节点数据 */
@@ -61,9 +53,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.article_list {
-  background: url('../../static/image/one/good.jpg') no-repeat center/cover;
-}
-</style>

@@ -40,5 +40,6 @@ new Vue({
     App
   },
   /* 首先生成，给App组件渲染 */
-  template: '<App />'
+  // template: '<App />'
+  render: h => h(App)
 })
